@@ -1,0 +1,38 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Optional: build or compiled outputs
+dist/
+build/
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Optional: database or uploads
+*.sql
+*.sqlite
+uploads/
+storage/
+
+# Optional: OS crash reports
+*.pid
+*.seed
+
+# Optional: misc
+.env.local
+.env.*.local

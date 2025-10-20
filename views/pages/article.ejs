@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title><%= meta.title %></title>
+  <meta name="description" content="<%= meta.description %>" />
+
+  <!-- Open Graph (WhatsApp / FB / LinkedIn) -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="<%= meta.title %>" />
+  <meta property="og:description" content="<%= meta.description %>" />
+  <meta property="og:image" content="<%= meta.image %>" />
+  <meta property="og:url" content="<%= meta.url %>" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= meta.title %>" />
+  <meta name="twitter:description" content="<%= meta.description %>" />
+  <meta name="twitter:image" content="<%= meta.image %>" />
+</head>
+<body style="font-family:sans-serif;max-width:800px;margin:2rem auto;padding:0 1rem;">
+  <a href="/pages">← واپسی</a>
+  <h1 style="margin-top:1rem;"><%= article.Title %></h1>
+
+  <p style="color:#666;">Writer: <%= article.writer || "" %></p>
+
+  <img src="<%= meta.image %>" alt="<%= article.Title %>" 
+       style="width:100%;max-height:420px;object-fit:cover;border-radius:8px;margin:1rem 0;" />
+
+  <div>
+    <!-- ArticleText is HTML encoded -->
+    <%- article.ArticleText %>
+  </div>
+
+  <hr style="margin-top:24px" />
+  <small>Views: <%= article.Views || 0 %> • Likes: <%= article.Likes || 0 %></small>
+
+  <!-- WhatsApp Share Button -->
+  <div style="margin-top:20px;">
+    <a 
+      href="https://api.whatsapp.com/send?text=<%= encodeURIComponent(meta.title + ' - ' + meta.description + '\n\nRead more: ' + meta.url) %>"
+      target="_blank"
+      style="display:inline-flex;align-items:center;background:#25D366;color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:bold;"
+    >
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:20px;height:20px;margin-right:8px;" />
+      Share on WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>

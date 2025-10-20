@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "article1",
+    "title": "How to Start Freelancing in 2025",
+    "description": "A complete guide to getting started with freelancing in 2025.",
+    "image": "/images/freelancing.jpg",
+    "content": "<p>Freelancing is booming in 2025! Learn how to set up your profile, find clients, and grow your business step-by-step.</p>"
+  },
+  {
+    "slug": "article2",
+    "title": "Learn Node.js Fast",
+    "description": "Step-by-step Node.js learning path for developers.",
+    "image": "/images/nodejs.jpg",
+    "content": "<p>Node.js powers modern backends! Here's your roadmap to master it quickly.</p>"
+  }
+]

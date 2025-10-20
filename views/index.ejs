@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ur">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تمام مضامین</title>
+</head>
+<body style="font-family:sans-serif;direction:rtl;padding:24px;">
+  <h1>مضامین</h1>
+  <ul>
+    <% if (!articles || articles.length === 0) { %>
+      <li>کوئی مضمون نہیں ملا</li>
+    <% } else { %>
+      <% articles.forEach(a => { %>
+        <li style="margin:12px 0;">
+          <a href="/pages/<%= a.id %>" style="font-weight:bold;font-size:18px;">
+            <%= a.Title %>
+          </a>
+          <div style="color:#666;font-size:14px;">
+            <%= a.seo ? (a.seo.length > 120 ? a.seo.slice(0,120) + "…" : a.seo) : "" %>
+          </div>
+        </li>
+      <% }) %>
+    <% } %>
+  </ul>
+</body>
+</html>
